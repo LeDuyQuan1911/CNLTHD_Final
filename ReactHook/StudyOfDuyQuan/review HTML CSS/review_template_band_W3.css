@@ -1,0 +1,79 @@
+.group_navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.group_navi ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.group_navi ul li:hover {
+    background-color: #ccc;
+
+}
+/* Ẩn menu con ban đầu */
+.group_navi ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Đặt dưới menu cha */
+    left: 0;
+    background-color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    z-index: 1000;
+}
+
+.group_navi ul li ul li {
+    display: block;
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid #777;
+}
+
+.group_navi ul li ul li:hover {
+    background-color: #ccc;
+}
+
+/* Hiển thị menu con khi hover vào mục "MORE" */
+.group_navi ul li:hover ul {
+    display: block;
+}
+
+.navigation {
+    background-color: #000;
+    position: sticky;
+    top: 0; /* Giúp thanh navigation dính ở đầu khi cuộn */
+    z-index: 1000; /* Đảm bảo nó hiển thị trên các phần tử khác */
+}
+ 
+.slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Chứa các ảnh trong slider */
+.slides {
+    display: flex;
+    width: 300%; /* 3 ảnh => 3 x 100% */
+    transition: transform 1s ease-in-out;
+    height: 100%;
+}
+
+/* Ảnh trong slider */
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hiển thị toàn bộ hình ảnh mà không bị phóng to */
+    flex-shrink: 0;
+}
