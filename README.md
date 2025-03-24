@@ -1,16 +1,39 @@
+# **CNLTHD_Project** 🚀
+
+## 📌 **Giới thiệu**  
+**Multi-vendor E-Shop** là một dự án thương mại điện tử sử dụng kiến trúc **Microservices** để tối ưu hóa hiệu suất và khả năng mở rộng. Dự án áp dụng công nghệ hiện đại, bao gồm **ReactJS, Node.js, Express.js, MongoDB** và **Docker** để triển khai.
 
 ---
 
-# **CNLTHD_Project** 🚀  
-### **Nhóm phát triển**  
+## 👨‍💻 **Nhóm phát triển**  
 1. **Lê Duy Quân** - [GitHub](https://github.com/LeDuyQuan1911/leduyquan.github.io/tree/gh-pages)  
 2. **Nguyễn Thị Thảo Nguyên** - [GitHub](https://github.com/ThaoNguyen157/nguynt.github.io/tree/gh-pages)  
 3. **Lê Trọng Luân** - [GitHub](https://github.com/trongluan23/Luan.github.io/tree/gh-pages)  
 
 ---
 
-## 📌 **Tên đề tài**  
-**Microservices Website Thương Mại Điện Tử**  
+## 🚀 **Cách chạy dự án với Docker**  
+
+### **1️⃣ Gắn thẻ (Tag) cho các Docker images**  
+```bash
+docker tag multi_vondor_e_shop-part-5-backend leduyquan2574/multi_vendor_backend:latest
+docker tag multi_vondor_e_shop-part-5-frontend leduyquan2574/multi_vendor_frontend:latest
+docker tag multi_vondor_e_shop-part-5-socket leduyquan2574/multi_vendor_socket:latest
+```
+
+### **2️⃣ Đẩy (Push) các images lên Docker Hub**  
+```bash
+docker push leduyquan2574/multi_vendor_backend:latest
+docker push leduyquan2574/multi_vendor_frontend:latest
+docker push leduyquan2574/multi_vendor_socket:latest
+```
+
+### **3️⃣ Chạy các containers**  
+```bash
+docker run -d --name multi_vendor_backend -p 8000:8000 leduyquan2574/multi_vendor_backend:latest
+docker run -d --name multi_vendor_frontend -p 3000:3000 leduyquan2574/multi_vendor_frontend:latest
+docker run -d --name multi_vendor_socket -p 4000:4000 leduyquan2574/multi_vendor_socket:latest
+```
 
 ---
 
@@ -18,6 +41,7 @@
 - **Front-end:** ReactJS ⚛️  
 - **Back-end:** Node.js / Express.js 🚀  
 - **Database:** MongoDB 🗄  
+- **Triển khai:** Docker 🐳  
 
 ---
 
@@ -37,11 +61,19 @@
 ---
 
 ## 📢 **Ghi chú**  
-- Dự án tuân theo mô hình **Microservices**, giúp tối ưu hóa hiệu suất và khả năng mở rộng.  
-- Sử dụng Docker để triển khai và quản lý các service.  
+- Dự án sử dụng mô hình **Microservices** để tăng hiệu suất và khả năng mở rộng.
+- Docker được sử dụng để triển khai và quản lý các service.
+- Backend và Frontend chạy trên các cổng tương ứng **5000, 3000, 4000**.
 
-## 📢 **Tài liệu tham khảo** 
-- Javascript basic / Reactjs : https://evonhub.dev/
-- Microservice : https://www.udemy.com/course/microservices-with-nodejs-react-typescript-and-kubernetes/?fbclid=IwY2xjawIqmfNleHRuA2FlbQIxMAABHcExm8Clsr3WVs_TVRb1IJLY910FyY8aOmFR2Z8_-Igo0hxzGI9nUtCVDg_aem_ljzVK8IRQDmpjzuXJgR45A&couponCode=ST4MT240225A, https://www.udemy.com/course/microservices-with-node-js-and-react/?fbclid=IwY2xjawIqmfVleHRuA2FlbQIxMAABHcy3Zu_aUb5fkxpS5UxDo4HEfeRq3sLJ6m4CwGuym20dgMWYOhWEmzg66g_aem_oH93O37_b0qGZlpMPsO_rw&couponCode=
+---
 
-https://www.udacity.com/dashboard
+## 📚 **Tài liệu tham khảo**  
+- **JavaScript & ReactJS:** [EvonHub](https://evonhub.dev/)  
+- **Microservices:**  
+  - [Khóa học Microservices với NodeJS, React, TypeScript & Kubernetes](https://www.udemy.com/course/microservices-with-nodejs-react-typescript-and-kubernetes/)  
+  - [Khóa học Microservices với Node.js và React](https://www.udemy.com/course/microservices-with-node-js-and-react/)  
+- **Udacity:** [Khóa học Udacity](https://www.udacity.com/dashboard)  
+
+---
+
+🔥 **Cảm ơn bạn đã quan tâm đến dự án của chúng tôi!** 🚀
