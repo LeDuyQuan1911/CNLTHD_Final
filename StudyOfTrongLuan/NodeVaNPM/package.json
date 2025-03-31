@@ -11,7 +11,8 @@
   "author": "duthanhduoc",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "node-va-npm": "file:"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
