@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb+srv://leduyquan2574:Quan19112003@quan.bqfgfhl.mongodb.net/
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    command: ["yarn", "start"]
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    command: ["yarn", "start"]
+
+  socket:
+    build: ./socket
+    container_name: socket
+    restart: always
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./socket:/app
+    working_dir: /app
+    command: ["node", "index.js"]
+
+volumes:
+  mongo_data:
