@@ -15,7 +15,9 @@
     "dotenv": "16.4.7",
     "ejs": "^3.1.10",
     "express": "5.0.1",
+    "express-fileupload": "1.4.0",
     "mongoose": "6.7.2",
+    "mongoose-delete": "0.5.4",
     "nodej2": "file:"
   },
   "devDependencies": {
