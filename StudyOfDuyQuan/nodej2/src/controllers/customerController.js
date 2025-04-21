@@ -2,6 +2,8 @@ const express = require('express'); // import express
 const { uploadSingleFile } = require('../services/fileService');
 const {createCustomerService} = require('../services/customerService'); // Import service để xử lý logic
 const Customer = require('../models/customer');
+const aqp = require('api-query-params');
+
 
 const postCreateCustomer = async (req, res) => {
     const { name, address, phone, email, Image, description } = req.body; // Lấy thông tin người dùng từ body request

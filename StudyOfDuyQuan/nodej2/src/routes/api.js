@@ -4,6 +4,7 @@ const routerAPI = express.Router();
 const {getUsersAPI, postUsersAPI, putUsersAPI, deleteUsersAPI, postUploadSingleFile, postUploadMultipleFiles, } = require('../controllers/apiController'); // import apiController
 const { postCreateCustomer, postCreateManyCustomer, getAllCustomer, updateCustomer, deleteCustomer, deleteCustomers } = require('../controllers/customerController');
 const { data } = require('autoprefixer');
+const { postCreateProject, postCreateTask, getProject, updateProject, deleteProject, deleteProjectUsers } = require('../controllers/apiProjectController');
 
 const apiRoutes = (app) => { // Tao type Express giup goi y cac method cho app
 
@@ -31,15 +32,6 @@ const apiRoutes = (app) => { // Tao type Express giup goi y cac method cho app
         })
     })
 
-    routerAPI.get('/info', (req, res) => {
-        let result = req.query
-        res.status(200).json({
-            message: 'Hello world',
-            errorCode: 0,
-            data: result
-        })
-    })
-
     routerAPI.get('/info/:name/:city', (req, res) => {
         let {name, city} = req.params
         let result = {
@@ -52,6 +44,14 @@ const apiRoutes = (app) => { // Tao type Express giup goi y cac method cho app
             data: result
         })
     })
+
+    // Project
+    routerAPI.post('/create-project', postCreateProject )
+    // routerAPI.post('/create-task', postCreateTask )
+    routerAPI.get('/projects', getProject )
+    routerAPI.put('/projects', updateProject )
+    routerAPI.delete('/projects', deleteProject )
+    routerAPI.delete('/project-users', deleteProjectUsers )
 
     app.use("/v1/api/", routerAPI); // tat cac url se bat dau bang / o day
 }
