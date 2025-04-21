@@ -8,6 +8,8 @@ const apiRoutes = require('./routes/api');
 const connection = require('./config/database');
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
+const logTimeMiddleware = require('./middleware/logTime');
+
 
 const port = process.env.PORT || 3000;
 const hostname = process.env.HOST_NAME || 'localhost';
@@ -15,7 +17,7 @@ const app = express();
 
 //config express file upload
 app.use(fileUpload());
-
+app.use(logTimeMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

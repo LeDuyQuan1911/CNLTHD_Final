@@ -1,0 +1,31 @@
+image: node:18
+
+stages:
+  - install
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install:
+  stage: install
+  script:
+    - echo "Installing dependencies..."
+    - npm install
+
+test:
+  stage: test
+  script:
+    - echo "Running test script..."
+    - npm run test
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying..."
+    - scp -r ./src user@your-server:/var/www/myapp
+    - scp package.json user@your-server:/var/www/myapp
+  only:
+    - main

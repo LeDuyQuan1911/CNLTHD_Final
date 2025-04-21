@@ -1,0 +1,36 @@
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+# Cài đặt dependencies
+install_dependencies:
+  stage: install
+  image: node:16 # Chọn version Node.js phù hợp với dự án của bạn
+  script:
+    - npm install
+
+# Chạy kiểm tra test (nếu có)
+test:
+  stage: test
+  image: node:16
+  script:
+    - npm test
+
+# Build CSS với Tailwind
+build_css:
+  stage: build
+  image: node:16
+  script:
+    - npm run build:css
+
+# Triển khai (Deploy) lên server hoặc môi trường staging
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying to server..."
+    - scp -r ./src user@your-server:/path/to/your/project
+    - scp package.json user@your-server:/path/to/your/project
+  only:
+    - master
