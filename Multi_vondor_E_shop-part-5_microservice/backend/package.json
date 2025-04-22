@@ -20,6 +20,7 @@
     "dotenv": "^16.0.3",
     "e-shop-multi-vendor": "file:",
     "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.5",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.0",
