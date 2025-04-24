@@ -1,0 +1,57 @@
+version: '3'
+services:
+  gateway:
+    build:
+      context: ./api-gateway
+    container_name: gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - book
+      - customer
+      - order
+
+  book:
+    build:
+      context: ./service_book
+    container_name: book
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_HOST=mongodb+srv://leduyquan2574:Quan19112003@quan.bqfgfhl.mongodb.net/
+    depends_on:
+      - db
+
+  customer:
+    build:
+      context: ./service_customer
+    container_name: customer
+    ports:
+      - "3002:3002"
+    environment:
+      - DB_HOST=mongodb+srv://leduyquan2574:Quan19112003@quan.bqfgfhl.mongodb.net/
+    depends_on:
+      - db
+
+  order:
+    build:
+      context: ./service_order
+    container_name: order
+    ports:
+      - "3003:3003"
+    environment:
+      - DB_HOST=mongodb+srv://leduyquan2574:Quan19112003@quan.bqfgfhl.mongodb.net/
+    depends_on:
+      - db
+
+  db:
+    image: mongo:latest
+    container_name: mongo_db
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongodb_data:
+    driver: local
