@@ -70,6 +70,78 @@
 | ![](https://res.cloudinary.com/dwahfjinm/image/upload/v1750292115/Screenshot_2025-06-19_070921_ayoe9d.png) | ![](https://res.cloudinary.com/dwahfjinm/image/upload/v1750292115/Screenshot_2025-06-19_070934_tr60fn.png) |
 | ![](https://res.cloudinary.com/dwahfjinm/image/upload/v1750292107/Screenshot_2025-06-19_070952_gqixej.png) | |
 
+🚀 Chức năng nổi bật
+👥 Xác thực người dùng
+Đăng ký tài khoản, xác minh email, tải ảnh đại diện.
+
+Đăng nhập, quản lý thông tin cá nhân.
+
+Thay đổi mật khẩu.
+
+🏠 Trang chủ
+Hiển thị sản phẩm mới nhất từ các người bán.
+
+Lọc theo danh mục, sắp xếp theo bán chạy.
+
+Xem tất cả sản phẩm, sự kiện khuyến mãi, FAQ.
+
+🔍 Tìm kiếm & Lọc
+Tìm kiếm sản phẩm theo tên.
+
+Lọc theo danh mục: Quần áo, giày dép, quà tặng...
+
+❤️ Danh sách yêu thích & Giỏ hàng
+Thêm/bỏ sản phẩm vào danh sách yêu thích.
+
+Thêm sản phẩm vào giỏ hàng.
+
+Thanh toán với nhiều hình thức: Paypal, Stripe, COD (trả tiền khi nhận).
+
+Áp dụng mã giảm giá.
+
+🛍️ Trang chi tiết sản phẩm
+Xem chi tiết sản phẩm: giá gốc, giá khuyến mãi, mô tả, số lượng đã bán.
+
+Xem hồ sơ người bán, chat trực tiếp với người bán.
+
+Xem các sản phẩm liên quan.
+
+👤 Trang hồ sơ người dùng
+Cập nhật thông tin cá nhân: tên, email, số điện thoại, địa chỉ.
+
+Theo dõi & quản lý đơn hàng.
+
+Hoàn tiền & đổi trả sau khi nhận hàng.
+
+Hộp thư chat với người bán.
+
+Quản lý địa chỉ (nhà riêng, công ty...).
+
+📬 Tin nhắn & Chat
+Chat thời gian thực với người bán.
+
+Gửi & nhận hình ảnh.
+
+Hiển thị trạng thái trực tuyến & thời gian gửi.
+
+👨‍💼 Trang quản lý người bán
+Quản lý sản phẩm, đơn hàng, doanh thu.
+
+Tạo sự kiện khuyến mãi.
+
+Tạo/xoá mã giảm giá.
+
+Quản lý hồ sơ shop, thông tin ngân hàng, rút tiền.
+
+👑 Trang quản lý Admin
+Quản lý toàn bộ người bán, người dùng, sản phẩm, đơn hàng, sự kiện.
+
+Xác minh yêu cầu rút tiền của người bán.
+
+Thống kê tổng doanh thu, số lượng đơn hàng, sản phẩm.
+
+Xoá người bán, người dùng, sự kiện vi phạm.
+
 
 ## 🚀 **Cách chạy phiên bản Microservices bằng Docker**
 
